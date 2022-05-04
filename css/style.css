@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 18px;
+    color: #000;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+button,
+input {
+    font-family: Montserrat;
+}
+.container {
+    max-width: 1300px;
+    margin: 0px auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+/*-------------HEADER-------------*/
+
+header, footer {
+    background-color: #3C2F2F;
+    color: #fff;
+    width: 100%;
+    padding: 1.5vw 0;
+}
+.header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+ul {
+    display: flex;
+    gap: 4.5vw;
+}
+
+/*-----------MAIN-----------*/
+
+.main-section {
+    background: url(../img/image.svg) no-repeat top;
+    background-position: right;
+    width: 100%;
+    height: 576px;
+    padding: 50px 0;
+    margin: 50px 0;
+}
+.form-box {
+    width: 550px;
+}
+h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+}
+p {
+    margin: 25px 0 50px 0;
+}
+input {
+    border: none;
+    border-bottom: 1px solid #b5b5b5;
+    width: 100%;
+    margin-bottom: 40px;
+    height: 40px;
+    font-size: 18px;
+    background-color: transparent;
+}
+input::placeholder {
+    color: #B0B8C0;
+    font-size: 18px;
+}
+input:focus {
+    outline: none;
+    border-bottom: #000 1px solid;
+}
+button {
+    border-radius: 30px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #4E148C;
+    width: 230px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/*--------FOOTER--------*/
+
+footer {
+    text-align: center;
+}
