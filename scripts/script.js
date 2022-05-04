@@ -1,8 +1,9 @@
-function submit() {
-    const flName = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-
-    alert('Hello');
-    //alert(`Name: ${flName}\nEmail: ${email}\nPhone: ${phone}`);
+const iconMenu = document.querySelector('.menu_icon');
+const menuBody = document.querySelector('.header-nav');
+if (iconMenu) {
+    iconMenu.addEventListener('click', function(e) {
+        document.body.classList.toggle('_lock');
+        iconMenu.classList.toggle('_active');
+        menuBody.classList.toggle('_active');
+    });
 }
