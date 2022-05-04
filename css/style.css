@@ -107,6 +107,9 @@ input {
     font-size: 18px;
     background-color: transparent;
 }
+.input._error {
+    border-color: rgb(255, 113, 113);
+}
 input::placeholder {
     color: #B0B8C0;
     font-size: 18px;
@@ -177,6 +180,17 @@ footer {
     .menu_icon span {
         top: 50%;
         transform: scale(1) translate(0px, -50%);
+    }
+    .menu_icon._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    .menu_icon._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .menu_icon._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
     }
     .header-nav {
         position: fixed;
