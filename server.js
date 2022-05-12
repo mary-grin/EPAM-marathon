@@ -24,3 +24,8 @@ app.use(express.static('./css'));
 app.use(express.static('./scripts'));
 app.use(express.static('./img'));
 app.use(routes);
+
+app.get('/', (req, res) => {
+    const title = 'Leave request';
+    res.render(createPath('index'), { title });
+});

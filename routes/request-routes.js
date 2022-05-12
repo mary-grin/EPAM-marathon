@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const {
-    getMainPage,
     insertRequest,
     getAllRequests,
     deleteRequest,
@@ -16,7 +15,6 @@ const {
 } = require('../controllers/controller');
 
 router.post('/', insertRequest);
-router.get('/', getMainPage);
 router.get('/check', getAllRequests);
 router.delete('/check/:id', deleteRequest);
 router.post('/in_process/:id', inProcess);

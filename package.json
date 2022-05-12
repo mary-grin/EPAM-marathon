@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/mary-grin/EPAM-marathon#readme",
   "dependencies": {
+    "chalk": "^5.0.1",
+    "dotenv": "^16.0.1",
     "ejs": "^3.1.7",
     "express": "^4.18.1",
     "mongoose": "^6.3.3",

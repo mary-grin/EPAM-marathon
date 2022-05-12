@@ -6,11 +6,6 @@ const handleError = (res, error) => {
     res.render(createPath('index'), {title: 'Error'});
 };
 
-const getMainPage = (req, res) => {
-    const title = 'Leave request';
-    res.render(createPath('index'), { title });
-};
-
 const insertRequest = (req, res) => {
     const status = 'NEW';
     const {name, email, phone} = req.body;
@@ -105,7 +100,6 @@ const login = (req, res) => {
 };
 
 module.exports = {
-    getMainPage,
     insertRequest,
     getAllRequests,
     deleteRequest,
