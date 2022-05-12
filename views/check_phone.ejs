@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+        <div class="container">
+            <h1>Check your request status</h1>
+            <form method="post" class="form_phone">
+                <input type="text" name="phone" id="phone" placeholder="Phone" class="check_phone">
+                <button type="submit" class="btn_phone">Check</button>
+            </form>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                    </tr>
+                </table>
+        </div>
+    </main>
+    <footer>&copy;MusliToxic 2022</footer>
+</body>
+<script src="/script.js"></script>
+</html>

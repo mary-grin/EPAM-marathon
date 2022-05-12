@@ -1,0 +1,29 @@
+{
+  "name": "epam-marathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mary-grin/EPAM-marathon.git"
+  },
+  "keywords": [
+    "qwerty060703"
+  ],
+  "author": "Mariia Hryn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mary-grin/EPAM-marathon/issues"
+  },
+  "homepage": "https://github.com/mary-grin/EPAM-marathon#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3",
+    "nodemon": "^2.0.16"
+  }
+}

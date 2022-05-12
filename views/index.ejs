@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+        <div class="container">
+            <div class="main-section">
+                <div class="form-box">
+                    <h2>Leave a request to take part in our course!</h2>
+                    <p>We will inform you, when your request has been processed.</p>
+                    <form method="post" id="form">
+                        <input type="text" placeholder="First name" id="name" class="input req" name="name">
+                        <input type="text" placeholder="Email" id="email" class="input req email" name="email">
+                        <input type="text" placeholder="Phone" id="phone" class="input req phone" name="phone">
+                        <button type="submit">Leave a request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>&copy;MusliToxic 2022</footer>
+</body>
+<script src="/script.js"></script>
+</html>

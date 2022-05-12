@@ -36,9 +36,14 @@ body {
     color: #000;
     font-family: Montserrat;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
 }
 body._lock {
     overflow: hidden;
+}
+main {
+    flex: 1 1 auto;
 }
 button,
 input {
@@ -81,7 +86,7 @@ ul {
 /*-----------MAIN-----------*/
 
 .main-section {
-    background: url(../img/image.svg) no-repeat top;
+    background: url(/image.svg) no-repeat top;
     background-position: right;
     width: 100%;
     height: 100%;
@@ -89,6 +94,11 @@ ul {
 }
 .form-box {
     width: 550px;
+}
+h1 {
+    font-weight: bold;
+    font-size: 38px;
+    margin: 50px 0 30px 0;
 }
 h2 {
     font-weight: bold;
@@ -128,9 +138,71 @@ button {
     margin-top: 20px;
     font-size: 20px;
 }
+table {
+    width: 100%;
+    margin: 30px 0;
+}
+table, tr, td, th {
+    border: 1px solid #000;
+    padding: 0;
+    border-collapse: collapse;
+}
+th {
+    background-color: #3C2F2F;
+    color: #fff;
+    height: 50px;
+}
+tr {
+    height: 30px;
+}
+.done, .in_process {
+    background-color: #9771c0;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 0px;
+    margin: 0;
+    width: 100%;
+}
+.done:hover, .in_process:hover {
+    background-color: #4E148C;
+    transition: .3s;
+}
+.delete {
+    background-color: #df8888;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 0px;
+    margin: 0;
+    width: 100%;
+}
+.delete:hover {
+    background-color: #cc3a3a;
+    transition: .3s;
+}
+.icon_delete {
+    width: 30px;
+    color: #fff;
+}
+.form_phone {
+    display: flex;
+    gap: 20px;
+}
+.check_phone {
+    margin-bottom: 0;
+}
+.btn_phone {
+    width: 200px;
+    height: 50px;
+    margin: 0;
+}
+.login_box {
+    width: 40%;
+    margin: 0 auto;
+    padding: 100px 0;
+}
 @media (max-width: 1199px) {
     .main-section {
-        background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url(../img/image.svg) no-repeat top;
+        background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url(/image.svg) no-repeat top;
         background-position: right;
         background-size: contain;
         width: 100%;
@@ -217,5 +289,40 @@ footer {
         max-width: 100%;
         margin: 0 auto;
     }
-
+    table, tr, td, th, .edit {
+        font-size: 14px;
+    }
+    .icon_delete {
+        width: 20px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .form_phone {
+        display: inline;
+    }
+    .btn_phone {
+        margin-top: 20px;
+        font-size: 14px;
+        width: 150px;
+    }
+    .login_box {
+        width: 100%;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    .btn {
+        font-size: 14px;
+    }
+}
+@media (max-width: 470px) {
+    .container {
+        padding: 0 10px;
+    }
+    table, tr, td, th, .edit {
+        font-size: 12px;
+    }
+    .btn {
+        font-size: 11px;
+    }
 }

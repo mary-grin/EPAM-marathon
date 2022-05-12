@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if(error > 0) {
             alert('Please input all fields of form');
         } else if(error === 0) {
+            form.submit();
             form.reset();
-            alert('Okey, your request has been successfully sent!');
         }
     }
 
@@ -66,3 +66,39 @@ document.addEventListener('DOMContentLoaded', () => {
         return input.value.length === 10;
     }
 });
+
+document.addEventListener('click', (e) => {
+    const id = e.target?.dataset?.id || null;
+    const button = document.getElementById(`btn_${id}`);
+    console.log('yes');
+    if(id) {
+        if(button.classList.contains('done')) {
+            console.log('done');
+            fetch(`/done/${id}`, {
+                method: 'POST',
+            }).then(() => {
+                window.location.reload();
+            });
+        } else if(button.classList.contains('in_process')) {
+            console.log('in_process');
+            fetch(`/in_process/${id}`, {
+                method: 'POST',
+            }).then(() => {
+                window.location.reload();
+            });
+        } else if(button.classList.contains('delete')) {
+            console.log('delete');
+            fetch(`/check/${id}`, {
+                method: 'DELETE',
+            }).then(() => {
+                window.location.reload();
+            });
+        } else {
+            console.log('Ты лох');
+        }
+    }
+});
+
+
+
+

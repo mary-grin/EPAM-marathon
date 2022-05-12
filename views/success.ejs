@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+        <div class="container">
+            <h1>Okey, <%= request.name%>, your request has been successfully sent!</h1>
+            <p>Check your data:</p>
+            <table>
+                <tr>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Request status</th>
+                </tr>
+                <tr>
+                    <td><%= request.email%></td>
+                    <td><%= request.phone%></td>
+                    <td><%= request.status%></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>&copy;MusliToxic 2022</footer>
+</body>
+<script src="/script.js"></script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+        <div class="container">
+            <h1>Admin panel</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Status</th>
+                    <th>Edit status</th>
+                </tr>
+                <% requests.forEach(el => { %>
+                    <tr>
+                        <td><%= el.name %></td>
+                        <td><%= el.email %></td>
+                        <td><%= el.phone %></td>
+                        <td><%= el.status%></td>
+                        <% if(el.status === 'NEW') { %>
+                        <td><button class="in_process btn" id="btn_<%= el.id %>" data-id="<%= el.id %>">Accept</button></td>
+                        <% } if (el.status === 'IN PROCESS') { %>
+                        <td><button class="done btn" id="btn_<%= el.id %>" data-id="<%= el.id %>">Finish</button></td>
+                        <% } if(el.status === 'DONE') { %>
+                        <td><button class="delete btn" id="btn_<%= el.id %>" data-id="<%= el.id %>"><img src="/bin.png" alt="Delete" class="icon_delete" id="delete" data-id="<%= el.id %>"></button></td>
+                        <% } %>
+                    </tr>
+                <%});%>
+            </table>
+        </div>
+    </main>
+    <footer>&copy;MusliToxic 2022</footer>
+</body>
+<script src="/script.js"></script>
+</html>
