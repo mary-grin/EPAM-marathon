@@ -93,9 +93,7 @@ document.addEventListener('click', (e) => {
             }).then(() => {
                 window.location.reload();
             });
-        } else {
-            console.log('Ты лох');
-        }
+        } 
     }
 });
 
